@@ -1,0 +1,103 @@
+2024-01-05T17:52:41,306 INFO [main] StartProcessing: -------- Processing UDP packets --------
+2024-01-05T17:52:41,308 INFO [main] StartProcessing: Frame#: 136, Time: 6.174016351
+2024-01-05T17:52:41,308 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10010000 00000000 
+2024-01-05T17:52:41,308 WARN [main] processmessage: Incoming UDP DatagramPacket could not be identified as a V2GTP message
+2024-01-05T17:52:41,308 INFO [main] StartProcessing: Frame#: 137, Time: 6.175334414
+2024-01-05T17:52:41,308 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10010000 00000001 
+2024-01-05T17:52:41,309 WARN [main] processmessage: Incoming UDP DatagramPacket could not be identified as a V2GTP message
+2024-01-05T17:52:41,309 INFO [main] StartProcessing: -------- Processing TLS packets --------
+2024-01-05T17:52:41,309 INFO [main] StartProcessing: Frame#: 151, Time: 6.266966294
+2024-01-05T17:52:41,309 INFO [main] processmessage: Processing SupportedAppProtocol
+2024-01-05T17:52:41,345 INFO [main] decodeHexString: XML representation of SupportedAppProtocolReq: 
+2024-01-05T17:52:41,356 INFO [main] decodeHexString: 
+<ns2:supportedAppProtocolReq xmlns:ns2="urn:iso:15118:2:2010:AppProtocol" xmlns:ns6="urn:iso:15118:2:2013:MsgDef" xmlns:ns5="http://www.w3.org/2000/09/xmldsig#" xmlns:ns7="urn:iso:15118:2:2013:MsgBody" xmlns:ns4="urn:iso:15118:2:2013:MsgDataTypes" xmlns:ns3="urn:iso:15118:2:2013:MsgHeader">
+    <AppProtocol>
+        <ProtocolNamespace>urn:iso:15118:2:2013:MsgDef</ProtocolNamespace>
+        <VersionNumberMajor>2</VersionNumberMajor>
+        <VersionNumberMinor>0</VersionNumberMinor>
+        <SchemaID>1</SchemaID>
+        <Priority>1</Priority>
+    </AppProtocol>
+    <AppProtocol>
+        <ProtocolNamespace>urn:iso:std:iso:15118:-20:AC</ProtocolNamespace>
+        <VersionNumberMajor>1</VersionNumberMajor>
+        <VersionNumberMinor>0</VersionNumberMinor>
+        <SchemaID>2</SchemaID>
+        <Priority>2</Priority>
+    </AppProtocol>
+</ns2:supportedAppProtocolReq>
+
+2024-01-05T17:52:41,356 INFO [main] StartProcessing: Frame#: 157, Time: 6.328241490
+2024-01-05T17:52:41,357 INFO [main] processmessage: Processing SupportedAppProtocol
+2024-01-05T17:52:41,358 INFO [main] decodeHexString: XML representation of SupportedAppProtocolRes: 
+2024-01-05T17:52:41,359 INFO [main] decodeHexString: 
+<ns2:supportedAppProtocolRes xmlns:ns2="urn:iso:15118:2:2010:AppProtocol" xmlns:ns6="urn:iso:15118:2:2013:MsgDef" xmlns:ns5="http://www.w3.org/2000/09/xmldsig#" xmlns:ns7="urn:iso:15118:2:2013:MsgBody" xmlns:ns4="urn:iso:15118:2:2013:MsgDataTypes" xmlns:ns3="urn:iso:15118:2:2013:MsgHeader">
+    <ResponseCode>OK_SuccessfulNegotiation</ResponseCode>
+    <SchemaID>2</SchemaID>
+</ns2:supportedAppProtocolRes>
+
+2024-01-05T17:52:41,359 INFO [main] StartProcessing: Frame#: 161, Time: 6.538468740
+2024-01-05T17:52:41,359 INFO [main] processmessage: Processing SupportedAppProtocol
+2024-01-05T17:52:41,380 INFO [main] StartProcessing: Frame#: 163, Time: 6.633351983
+2024-01-05T17:52:41,381 INFO [main] processmessage: Processing V2GTPMessage
+2024-01-05T17:52:41,384 INFO [main] StartProcessing: Frame#: 167, Time: 6.752689653
+2024-01-05T17:52:41,384 INFO [main] processmessage: Processing V2GTPMessage
+2024-01-05T17:52:41,392 INFO [main] StartProcessing: Frame#: 169, Time: 6.833098359
+2024-01-05T17:52:41,392 INFO [main] processmessage: Processing V2GTPMessage
+2024-01-05T17:52:41,393 INFO [main] StartProcessing: Frame#: 173, Time: 7.061594445
+2024-01-05T17:52:41,394 INFO [main] processmessage: Processing V2GTPMessage
+2024-01-05T17:52:41,394 INFO [main] StartProcessing: Frame#: 175, Time: 7.171125220
+2024-01-05T17:52:41,395 INFO [main] processmessage: Processing V2GTPMessage
+2024-01-05T17:52:41,395 INFO [main] StartProcessing: Frame#: 178, Time: 7.341444478
+2024-01-05T17:52:41,395 INFO [main] processmessage: Processing V2GTPMessage
+2024-01-05T17:52:41,396 INFO [main] StartProcessing: Frame#: 180, Time: 7.383070634
+2024-01-05T17:52:41,396 INFO [main] processmessage: Processing V2GTPMessage
+2024-01-05T17:52:41,397 INFO [main] StartProcessing: Frame#: 182, Time: 7.446213782
+2024-01-05T17:52:41,397 INFO [main] processmessage: Processing V2GTPMessage
+2024-01-05T17:52:41,398 INFO [main] StartProcessing: Frame#: 184, Time: 7.478317409
+2024-01-05T17:52:41,398 INFO [main] processmessage: Processing V2GTPMessage
+2024-01-05T17:52:41,402 INFO [main] StartProcessing: Frame#: 188, Time: 7.548822052
+2024-01-05T17:52:41,402 INFO [main] processmessage: Processing V2GTPMessage
+2024-01-05T17:52:41,403 INFO [main] decodeHexString: XML representation of SessionStopRes: 
+2024-01-05T17:52:41,404 INFO [main] decodeHexString: 
+<ns7:SessionStopRes xmlns:ns7="urn:iso:15118:2:2013:MsgBody" xmlns:ns6="urn:iso:15118:2:2013:MsgDef" xmlns:ns5="http://www.w3.org/2000/09/xmldsig#" xmlns:ns2="urn:iso:15118:2:2010:AppProtocol" xmlns:ns4="urn:iso:15118:2:2013:MsgDataTypes" xmlns:ns3="urn:iso:15118:2:2013:MsgHeader">
+    <ns7:ResponseCode>OK_NewSessionEstablished</ns7:ResponseCode>
+</ns7:SessionStopRes>
+
+2024-01-05T17:52:41,404 DEBUG [main] decodeHexString: This is the end of one session
+2024-01-05T17:52:41,404 DEBUG [main] decodeHexString: Reset isSupportedAppProtocolReqFound and isSupportedAppProtocolResFound
+
+2024-01-05T17:52:41,404 INFO [main] StartProcessing: Frame#: 189, Time: 7.581798947
+2024-01-05T17:52:41,404 INFO [main] processmessage: Processing V2GTPMessage
+2024-01-05T17:52:41,405 INFO [main] StartProcessing: Frame#: 191, Time: 7.657570840
+2024-01-05T17:52:41,405 INFO [main] processmessage: Processing V2GTPMessage
+2024-01-05T17:52:41,405 INFO [main] StartProcessing: Frame#: 193, Time: 7.702839781
+2024-01-05T17:52:41,405 INFO [main] processmessage: Processing V2GTPMessage
+2024-01-05T17:52:41,406 INFO [main] StartProcessing: Frame#: 195, Time: 7.755128743
+2024-01-05T17:52:41,407 INFO [main] processmessage: Processing V2GTPMessage
+2024-01-05T17:52:41,420 INFO [main] StartProcessing: Frame#: 197, Time: 7.789783818
+2024-01-05T17:52:41,421 INFO [main] processmessage: Processing V2GTPMessage
+2024-01-05T17:52:41,422 INFO [main] StartProcessing: Frame#: 199, Time: 7.857442959
+2024-01-05T17:52:41,422 INFO [main] processmessage: Processing V2GTPMessage
+2024-01-05T17:52:41,422 INFO [main] StartProcessing: Frame#: 200, Time: 7.882433877
+2024-01-05T17:52:41,423 INFO [main] processmessage: Processing V2GTPMessage
+2024-01-05T17:52:41,424 INFO [main] StartProcessing: Frame#: 202, Time: 7.947171073
+2024-01-05T17:52:41,424 INFO [main] processmessage: Processing V2GTPMessage
+2024-01-05T17:52:41,424 INFO [main] StartProcessing: Frame#: 203, Time: 7.969218417
+2024-01-05T17:52:41,424 INFO [main] processmessage: Processing V2GTPMessage
+2024-01-05T17:52:41,425 INFO [main] StartProcessing: Frame#: 205, Time: 8.022463464
+2024-01-05T17:52:41,425 INFO [main] processmessage: Processing V2GTPMessage
+2024-01-05T17:52:41,426 INFO [main] StartProcessing: Frame#: 206, Time: 8.040102859
+2024-01-05T17:52:41,426 INFO [main] processmessage: Processing V2GTPMessage
+2024-01-05T17:52:41,427 INFO [main] StartProcessing: Frame#: 208, Time: 8.079001759
+2024-01-05T17:52:41,427 INFO [main] processmessage: Processing V2GTPMessage
+2024-01-05T17:52:41,427 INFO [main] StartProcessing: Frame#: 210, Time: 8.095752782
+2024-01-05T17:52:41,428 INFO [main] processmessage: Processing V2GTPMessage
+2024-01-05T17:52:41,428 INFO [main] StartProcessing: Frame#: 212, Time: 8.152981599
+2024-01-05T17:52:41,428 INFO [main] processmessage: Processing V2GTPMessage
+2024-01-05T17:52:41,429 INFO [main] StartProcessing: Frame#: 213, Time: 8.193325949
+2024-01-05T17:52:41,429 INFO [main] processmessage: Processing V2GTPMessage
+2024-01-05T17:52:41,430 INFO [main] StartProcessing: Frame#: 215, Time: 8.244266670
+2024-01-05T17:52:41,430 INFO [main] processmessage: Processing SupportedAppProtocol
+2024-01-05T17:52:41,502 INFO [main] StartProcessing: Frame#: 217, Time: 8.285545503
+2024-01-05T17:52:41,502 INFO [main] processmessage: Processing V2GTPMessage
