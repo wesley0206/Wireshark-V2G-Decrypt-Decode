@@ -283,7 +283,7 @@ class EXI:
         self.get_exi_codec()
         
         if MESSAGE_LOG_EXI:
-            logger.debug(f"EXI-encoded message (ns={namespace}): {exi_message.hex()}")
+            print(f"EXI-encoded message (ns={namespace}): {exi_message.hex()}")
 
         try:
             exi_decoded = self.exi_codec.decode(exi_message, namespace)
@@ -300,8 +300,9 @@ class EXI:
             ) from exc
 
         if MESSAGE_LOG_JSON:
-            logger.info(f"Decoded message (ns={namespace}): {exi_decoded}")
-
+            print(f"Decoded message (ns={namespace}): {exi_decoded}\n")
+            
+    
         try:
             if namespace == Namespace.SAP and "supportedAppProtocolReq" in decoded_dict:
                 return SupportedAppProtocolReq.parse_obj(
@@ -400,3 +401,4 @@ class EXI:
             raise EXIDecodingError(
                 f"EXI decoding error: {exc}. \n\nDecoded dict: " f"{decoded_dict}"
             ) from exc
+        

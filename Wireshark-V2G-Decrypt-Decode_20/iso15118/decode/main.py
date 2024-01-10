@@ -1,10 +1,13 @@
 import csv
 import os
+import logging
 
 from iso15118.shared.messages.v2gtp import V2GTPMessage
 from iso15118.shared.comm_session import EXI
 from iso15118.shared.messages.sdp import SDPRequest, SDPResponse
 from iso15118.shared.messages.enums import Namespace, Protocol, ISOV20PayloadTypes, ISOV2PayloadTypes
+
+logger = logging.getLogger(__name__)
 
 def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -14,7 +17,7 @@ def main():
         csv_reader = csv.reader(csv_file)
         
         for row in (csv_reader):
-            print("Frame#: " + row[0] + ", Time: " + row[1])
+            logger.info("Frame#: " + row[0] + ", Time: " + row[1])
             hex_msg = row[2]
             payload_type = "0x" + hex_msg[4:8]
             byte_array_msg = bytes.fromhex(row[2])
@@ -29,6 +32,7 @@ def main():
                 
             else :
                 raise ValueError("not a valid SDP message")
+            
     print("-------- End of UDP packets --------")
             
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -38,52 +42,59 @@ def main():
         csv_reader = csv.reader(csv_file)
 
         for index, row in enumerate(csv_reader):
-            #Processing SupportedAppProtocolRes/Req.
+            # Processing SupportedAppProtocolRes/Req.
             if index == 0 or index == 1:
-                print("Frame#: " + row[0] + ", Time: " + row[1])
+                logger.info("Frame#: " + row[0] + ", Time: " + row[1])
                 hex_msg = row[2]
-                payload_type = "0x" + hex_msg[4:8]
-                byte_array_msg = bytes.fromhex(row[2])
-                print("V2GTP message :")
-                
-                if payload_type == hex(ISOV20PayloadTypes.SAP.value):
-                    payload_type = hex(ISOV20PayloadTypes.SAP.value)
-                    PayloadType = Namespace.SAP.value
-                    protocol = Protocol.ISO_15118_20_COMMON_MESSAGES
-                    genPayloadType = ISOV20PayloadTypes.SAP
+                if hex_msg[0:4] == "01fe" :
+                    payload_type = "0x" + hex_msg[4:8]
+                    byte_array_msg = bytes.fromhex(row[2])
+                    print("V2GTP message :")
                     
+                    if payload_type == hex(ISOV20PayloadTypes.SAP.value):
+                        payload_type = hex(ISOV20PayloadTypes.SAP.value)
+                        namespace = Namespace.SAP.value
+                        protocol = Protocol.ISO_15118_20_COMMON_MESSAGES
+                        
+                    else :
+                        raise ValueError("not a valid V2GTP message")
                 else :
-                    raise ValueError("not a valid V2GTP message")
-            #Processing other V2GTP messages.
+                        raise ValueError("not a valid V2GTP message")
+                
+            # Processing other V2GTP messages.
             else:
-                print("Frame#: " + row[0] + ", Time: " + row[1])
+                logger.info("Frame#: " + row[0] + ", Time: " + row[1])
                 hex_msg = row[2]
-                payload_type = "0x" + hex_msg[4:8]
-                byte_array_msg = bytes.fromhex(row[2])
-                print("V2GTP message :")
-                
-                if payload_type == hex(ISOV2PayloadTypes.EXI_ENCODED.value):
-                    PayloadType = Namespace.ISO_V20_COMMON_MSG.value
-                    protocol = Protocol.ISO_15118_20_COMMON_MESSAGES
-                    genPayloadType = ISOV20PayloadTypes.MAINSTREAM
+                if hex_msg[0:4] == "01fe" :
+                    payload_type = "0x" + hex_msg[4:8]
+                    byte_array_msg = bytes.fromhex(row[2])
+                    print("V2GTP message :")
                     
-                elif payload_type == hex(ISOV20PayloadTypes.MAINSTREAM.value):
-                    PayloadType = Namespace.ISO_V20_COMMON_MSG.value
-                    protocol = Protocol.ISO_15118_20_COMMON_MESSAGES
-                    genPayloadType = ISOV20PayloadTypes.MAINSTREAM
-                    
-                elif payload_type == hex(ISOV20PayloadTypes.AC_MAINSTREAM.value):
-                    PayloadType = Namespace.ISO_V20_AC.value
-                    protocol = Protocol.ISO_15118_20_AC
-                    genPayloadType = ISOV20PayloadTypes.AC_MAINSTREAM
+                    if payload_type == hex(ISOV2PayloadTypes.EXI_ENCODED.value):
+                        namespace = Namespace.ISO_V20_COMMON_MSG.value
+                        protocol = Protocol.ISO_15118_20_COMMON_MESSAGES
+                        
+                        
+                    elif payload_type == hex(ISOV20PayloadTypes.MAINSTREAM.value):
+                        namespace = Namespace.ISO_V20_COMMON_MSG.value
+                        protocol = Protocol.ISO_15118_20_COMMON_MESSAGES
+                        
+                    elif payload_type == hex(ISOV20PayloadTypes.AC_MAINSTREAM.value):
+                        namespace = Namespace.ISO_V20_AC.value
+                        protocol = Protocol.ISO_15118_20_AC
+                        
+                    else :
+                        raise ValueError("not a valid V2GTP message")
                 else :
-                    raise ValueError("not a valid V2GTP message")
-                
-            genmsg = V2GTPMessage(protocol, genPayloadType, byte_array_msg)
-            v2gmsg = genmsg.from_bytes(protocol, byte_array_msg)
-            byte_array_msg = bytes.fromhex(row[2])
+                        raise ValueError("not a valid V2GTP message")
+               
+            v2gmsg = V2GTPMessage.from_bytes(protocol, byte_array_msg)
+            print(v2gmsg)
+            
+            # Decoding
             Decode_tls = EXI()
-            Decode_tls.from_exi(v2gmsg.payload, PayloadType)
+            Decode_tls.from_exi(v2gmsg.payload, namespace)
+            
     print("-------- End of TLS packets --------")
     
 if __name__ == "__main__":

@@ -48,7 +48,7 @@ tshark -r out-dsb.pcapng -Y "udp and data.data and ((eth.src == $evccMAC and eth
 echo -e "\e[1mINFO: Dumping TLS packet from out-dsb.pcapng...\e[0m"
 tshark -r out-dsb.pcapng -Y "tls and data.data and (eth.addr == $seccMAC and eth.addr == $evccMAC)" -T fields -e frame.number -e frame.time_relative -e data.data -E header=n -E separator=, -E quote=n > csv/tlsDump.csv
 
-echo -e "\e[1mINFO: Converting dumped data to XML format...\e[0m"
+echo -e "\e[1mINFO: Converting dumped data to JSON format...\e[0m"
 cd ..
 cd ..
 poetry shell
