@@ -1,0 +1,123 @@
+2024-01-30 10:56:19,440 - INFO - -------- Processing UDP packets --------
+2024-01-30 10:56:19,440 - INFO - Frame#: 136, Time: 6.174016351
+2024-01-30 10:56:19,441 - INFO - SECCDiscoveryReq Settings : [Security: TLS, Protocol: TCP]
+2024-01-30 10:56:19,441 - INFO - Frame#: 137, Time: 6.175334414
+2024-01-30 10:56:19,441 - INFO - SECCDiscoveryRes Settings : [ IP address: fe80::2f69:c5ce:924c:4460, Port: 54144 , Security: TLS , Transport: TCP ]
+2024-01-30 10:56:19,441 - INFO - -------- Processing TLS packets --------
+2024-01-30 10:56:19,441 - INFO - Frame#: 151, Time: 6.266966294
+2024-01-30 10:56:19,441 - INFO - V2GTP message :
+2024-01-30 10:56:20,176 - INFO - Decoded message (ns=urn:iso:15118:2:2010:AppProtocol): {"supportedAppProtocolReq":{"AppProtocol":[{"ProtocolNamespace":"urn:iso:15118:2:2013:MsgDef","VersionNumberMajor":2,"VersionNumberMinor":0,"SchemaID":1,"Priority":1},{"ProtocolNamespace":"urn:iso:std:iso:15118:-20:AC","VersionNumberMajor":1,"VersionNumberMinor":0,"SchemaID":2,"Priority":2}]}}
+
+2024-01-30 10:56:20,176 - INFO - Frame#: 157, Time: 6.32824149
+2024-01-30 10:56:20,176 - INFO - V2GTP message :
+2024-01-30 10:56:20,178 - INFO - Decoded message (ns=urn:iso:15118:2:2010:AppProtocol): {"supportedAppProtocolRes":{"ResponseCode":"OK_SuccessfulNegotiation","SchemaID":2}}
+
+2024-01-30 10:56:20,178 - INFO - Frame#: 163, Time: 6.633351983
+2024-01-30 10:56:20,179 - INFO - V2GTP message :
+2024-01-30 10:56:20,278 - INFO - Decoded message (ns=urn:iso:std:iso:15118:-20:CommonMessages): {"SessionSetupRes":{"Header":{"SessionID":"3C44CDF27D027A3D","TimeStamp":1702447143},"ResponseCode":"OK_NewSessionEstablished","EVSEID":"UK123E1234"}}
+
+2024-01-30 10:56:20,278 - INFO - Frame#: 167, Time: 6.752689653
+2024-01-30 10:56:20,278 - INFO - V2GTP message :
+2024-01-30 10:56:20,323 - INFO - Decoded message (ns=urn:iso:std:iso:15118:-20:CommonMessages): {"AuthorizationSetupReq":{"Header":{"SessionID":"3C44CDF27D027A3D","TimeStamp":1702447143}}}
+
+2024-01-30 10:56:20,324 - INFO - Frame#: 169, Time: 6.833098359
+2024-01-30 10:56:20,324 - INFO - V2GTP message :
+2024-01-30 10:56:20,367 - INFO - Decoded message (ns=urn:iso:std:iso:15118:-20:CommonMessages): {"AuthorizationSetupRes":{"Header":{"SessionID":"3C44CDF27D027A3D","TimeStamp":1702447143},"ResponseCode":"OK","AuthorizationServices":["PnC","EIM"],"CertificateInstallationService":true,"PnC_ASResAuthorizationMode":{"GenChallenge":"lRt2CpYBlcG3Gia/EfvETw=="}}}
+
+2024-01-30 10:56:20,367 - INFO - Frame#: 173, Time: 7.061594445
+2024-01-30 10:56:20,368 - INFO - V2GTP message :
+2024-01-30 10:56:20,412 - INFO - Decoded message (ns=urn:iso:std:iso:15118:-20:CommonMessages): {"AuthorizationReq":{"Header":{"SessionID":"3C44CDF27D027A3D","TimeStamp":1702447143,"Signature":{"SignedInfo":{"CanonicalizationMethod":{"Algorithm":"http://www.w3.org/TR/canonical-exi/"},"SignatureMethod":{"Algorithm":"http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"},"Reference":[{"URI":"#id1","Transforms":{"Transform":[{"Algorithm":"http://www.w3.org/TR/canonical-exi/"}]},"DigestMethod":{"Algorithm":"http://www.w3.org/2001/04/xmlenc#sha256"},"DigestValue":"JYXyMTZqOetYEvN3U6SJHMhKtSVqCIMSNmcZpjLbTZI="}]},"SignatureValue":{"value":"C43RxiHP18oegI/yMu7LE2spRhKp5IkoA/q8mI/FXakPzP9KY7uen2HBuKZpJQHeCK2HwIXNYC54eA31ZeSJ1Q=="}}},"SelectedAuthorizationService":"PnC","PnC_AReqAuthorizationMode":{"Id":"id1","GenChallenge":"lRt2CpYBlcG3Gia/EfvETw==","ContractCertificateChain":{"Certificate":"MIICYjCCAgmgAwIBAgICMEQwCgYIKoZIzj0EAwIwVjEiMCAGA1UEAwwZUEtJLUV4dF9DUlRfTU9fU1VCMl9WQUxJRDEPMA0GA1UECgwGU3dpdGNoMQswCQYDVQQGEwJVSzESMBAGCgmSJomT8ixkARkWAk1PMB4XDTIzMTExMzEyMjYxOVoXDTI1MTExMjEyMjYxOVowTDEYMBYGA1UEAwwPVUtTV0kxMjM0NTY3ODlBMQ8wDQYDVQQKDAZTd2l0Y2gxCzAJBgNVBAYTAlVLMRIwEAYKCZImiZPyLGQBGRYCTU8wWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAAS2fjBBSoRtmvzglFFyvh2oQQjTz9c7QDWharKDz+YKU7YgfqcP6wz1XJK68HTdIfPXOq3QKQipo7TUWp0m4rr6o4HQMIHNMAwGA1UdEwEB/wQCMAAwDgYDVR0PAQH/BAQDAgPoMB0GA1UdDgQWBBRCgbRJtzedSWDJwD52W+iNfT84VDBtBggrBgEFBQcBAQRhMF8wJAYIKwYBBQUHMAGGGGh0dHBzOi8vd3d3LmV4YW1wbGUuY29tLzA3BggrBgEFBQcwAoYraHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vSW50ZXJtZWRpYXRlLUNBLmNlcjAfBgNVHSMEGDAWgBShxekLNXhiW/Oa3R2LFkHm4aeTvzAKBggqhkjOPQQDAgNHADBEAiARozLVgF5VuwlsOsU1fNjbLkzrN+zi58B6AnU0/9DViQIgA9mbUhx+/gUBxiLd2E5ljCgYaR1Kb90O150JaJZp5A4=","SubCertificates":{"Certificate":["MIICdDCCAhmgAwIBAgICMEMwCgYIKoZIzj0EAwIwVjEiMCAGA1UEAwwZUEtJLUV4dF9DUlRfTU9fU1VCMV9WQUxJRDEPMA0GA1UECgwGU3dpdGNoMQswCQYDVQQGEwJVSzESMBAGCgmSJomT8ixkARkWAk1PMB4XDTIzMTExMzEyMjYxOVoXDTI3MTExMjEyMjYxOVowVjEiMCAGA1UEAwwZUEtJLUV4dF9DUlRfTU9fU1VCMl9WQUxJRDEPMA0GA1UECgwGU3dpdGNoMQswCQYDVQQGEwJVSzESMBAGCgmSJomT8ixkARkWAk1PMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEgpW1rA89MjYXnjE9LrMO7DTLtG+H32xYCVquJm9Ql3sTuymOG4mbMGuEp8lYsnvRBe2wHWyZ6puO9UAPfVMf5qOB1jCB0zASBgNVHRMBAf8ECDAGAQH/AgEAMA4GA1UdDwEB/wQEAwIBxjAdBgNVHQ4EFgQUocXpCzV4Ylvzmt0dixZB5uGnk78wbQYIKwYBBQUHAQEEYTBfMCQGCCsGAQUFBzABhhhodHRwczovL3d3dy5leGFtcGxlLmNvbS8wNwYIKwYBBQUHMAKGK2h0dHBzOi8vd3d3LmV4YW1wbGUuY29tL0ludGVybWVkaWF0ZS1DQS5jZXIwHwYDVR0jBBgwFoAU3u5mHuVV42nJA4prBBhf2Iv6/MUwCgYIKoZIzj0EAwIDSQAwRgIhANB3/OreVKkYF/Vv5Vb9rnulf0hEwFYFEP9es0r1ZuBbAiEA9Bcvz3IG0ew5ESRx70HZzDr2sKna5Bl08cuSin6NucY=","MIICYzCCAgigAwIBAgICMEIwCgYIKoZIzj0EAwIwRTERMA8GA1UEAwwITU9Sb290Q0ExDzANBgNVBAoMBlN3aXRjaDELMAkGA1UEBhMCVUsxEjAQBgoJkiaJk/IsZAEZFgJNTzAeFw0yMzExMTMxMjI2MTlaFw0yNzExMTIxMjI2MTlaMFYxIjAgBgNVBAMMGVBLSS1FeHRfQ1JUX01PX1NVQjFfVkFMSUQxDzANBgNVBAoMBlN3aXRjaDELMAkGA1UEBhMCVUsxEjAQBgoJkiaJk/IsZAEZFgJNTzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABNb9L9gL0HgLvAwWUrcYSKf2d3rFAgqab612egyxR8bGi554RnydZijVjOweqpF+pdXHlVb+CJF0ER3kiT7CfrqjgdYwgdMwEgYDVR0TAQH/BAgwBgEB/wIBATAOBgNVHQ8BAf8EBAMCAQYwHQYDVR0OBBYEFN7uZh7lVeNpyQOKawQYX9iL+vzFMG0GCCsGAQUFBwEBBGEwXzAkBggrBgEFBQcwAYYYaHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vMDcGCCsGAQUFBzAChitodHRwczovL3d3dy5leGFtcGxlLmNvbS9JbnRlcm1lZGlhdGUtQ0EuY2VyMB8GA1UdIwQYMBaAFMMtmii9BGxaQCdNZkZgZsqlxh3GMAoGCCqGSM49BAMCA0kAMEYCIQD64REp/KjuDX6u/G/uCAsXUWzXoaGZg570w5PV4tbR0AIhANc3HsyXpX7Ty/Lv3kqcE2Vckc7G/67rhg9kCwhSlWig"]}}}}}
+
+2024-01-30 10:56:20,416 - INFO - Frame#: 175, Time: 7.17112522
+2024-01-30 10:56:20,416 - INFO - V2GTP message :
+2024-01-30 10:56:20,451 - INFO - Decoded message (ns=urn:iso:std:iso:15118:-20:CommonMessages): {"AuthorizationRes":{"Header":{"SessionID":"3C44CDF27D027A3D","TimeStamp":1702447143},"ResponseCode":"OK","EVSEProcessing":"Finished"}}
+
+2024-01-30 10:56:20,451 - INFO - Frame#: 178, Time: 7.341444478
+2024-01-30 10:56:20,451 - INFO - V2GTP message :
+2024-01-30 10:56:20,491 - INFO - Decoded message (ns=urn:iso:std:iso:15118:-20:CommonMessages): {"ServiceDiscoveryReq":{"Header":{"SessionID":"3C44CDF27D027A3D","TimeStamp":1702447143}}}
+
+2024-01-30 10:56:20,491 - INFO - Frame#: 180, Time: 7.383070634
+2024-01-30 10:56:20,491 - INFO - V2GTP message :
+2024-01-30 10:56:20,524 - INFO - Decoded message (ns=urn:iso:std:iso:15118:-20:CommonMessages): {"ServiceDiscoveryRes":{"Header":{"SessionID":"3C44CDF27D027A3D","TimeStamp":1702447143},"ResponseCode":"OK","ServiceRenegotiationSupported":false,"EnergyTransferServiceList":{"Service":[{"ServiceID":1,"FreeService":false},{"ServiceID":5,"FreeService":false}]}}}
+
+2024-01-30 10:56:20,524 - INFO - Frame#: 182, Time: 7.446213782
+2024-01-30 10:56:20,524 - INFO - V2GTP message :
+2024-01-30 10:56:20,560 - INFO - Decoded message (ns=urn:iso:std:iso:15118:-20:CommonMessages): {"ServiceDetailReq":{"Header":{"SessionID":"3C44CDF27D027A3D","TimeStamp":1702447144},"ServiceID":5}}
+
+2024-01-30 10:56:20,560 - INFO - Frame#: 184, Time: 7.478317409
+2024-01-30 10:56:20,560 - INFO - V2GTP message :
+2024-01-30 10:56:20,596 - INFO - Decoded message (ns=urn:iso:std:iso:15118:-20:CommonMessages): {"ServiceDetailRes":{"Header":{"SessionID":"3C44CDF27D027A3D","TimeStamp":1702447144},"ResponseCode":"OK","ServiceID":5,"ServiceParameterList":{"ParameterSet":[{"ParameterSetID":1,"Parameter":[{"Name":"Connector","intValue":2},{"Name":"ControlMode","intValue":1},{"Name":"EVSENominalVoltage","intValue":400},{"Name":"MobilityNeedsMode","intValue":1},{"Name":"Pricing","intValue":0},{"Name":"BPTChannel","intValue":1},{"Name":"GeneratorMode","intValue":1},{"Name":"GridCodeIslandingDetectionMethod","intValue":1}]},{"ParameterSetID":2,"Parameter":[{"Name":"Connector","intValue":2},{"Name":"ControlMode","intValue":2},{"Name":"EVSENominalVoltage","intValue":400},{"Name":"MobilityNeedsMode","intValue":1},{"Name":"Pricing","intValue":0},{"Name":"BPTChannel","intValue":1},{"Name":"GeneratorMode","intValue":1},{"Name":"GridCodeIslandingDetectionMethod","intValue":1}]}]}}}
+
+2024-01-30 10:56:20,597 - INFO - Frame#: 188, Time: 7.548822052
+2024-01-30 10:56:20,597 - INFO - V2GTP message :
+2024-01-30 10:56:20,626 - INFO - Decoded message (ns=urn:iso:std:iso:15118:-20:CommonMessages): {"ServiceSelectionReq":{"Header":{"SessionID":"3C44CDF27D027A3D","TimeStamp":1702447144},"SelectedEnergyTransferService":{"ServiceID":5,"ParameterSetID":1}}}
+
+2024-01-30 10:56:20,626 - INFO - Frame#: 189, Time: 7.581798947
+2024-01-30 10:56:20,626 - INFO - V2GTP message :
+2024-01-30 10:56:20,656 - INFO - Decoded message (ns=urn:iso:std:iso:15118:-20:CommonMessages): {"ServiceSelectionRes":{"Header":{"SessionID":"3C44CDF27D027A3D","TimeStamp":1702447144},"ResponseCode":"OK"}}
+
+2024-01-30 10:56:20,657 - INFO - Frame#: 191, Time: 7.65757084
+2024-01-30 10:56:20,657 - INFO - V2GTP message :
+2024-01-30 10:56:20,695 - INFO - Decoded message (ns=urn:iso:std:iso:15118:-20:AC): {"AC_ChargeParameterDiscoveryReq":{"Header":{"SessionID":"3C44CDF27D027A3D","TimeStamp":1702447144},"BPT_AC_CPDReqEnergyTransferMode":{"EVMaximumChargePower":{"Exponent":3,"Value":3},"EVMaximumChargePower_L2":{"Exponent":3,"Value":3},"EVMaximumChargePower_L3":{"Exponent":3,"Value":3},"EVMinimumChargePower":{"Exponent":0,"Value":100},"EVMinimumChargePower_L2":{"Exponent":0,"Value":100},"EVMinimumChargePower_L3":{"Exponent":0,"Value":100},"EVMaximumDischargePower":{"Exponent":3,"Value":11},"EVMaximumDischargePower_L2":{"Exponent":3,"Value":11},"EVMaximumDischargePower_L3":{"Exponent":3,"Value":11},"EVMinimumDischargePower":{"Exponent":0,"Value":100},"EVMinimumDischargePower_L2":{"Exponent":0,"Value":100},"EVMinimumDischargePower_L3":{"Exponent":0,"Value":100}}}}
+
+2024-01-30 10:56:20,695 - INFO - Frame#: 193, Time: 7.702839781
+2024-01-30 10:56:20,696 - INFO - V2GTP message :
+2024-01-30 10:56:20,719 - INFO - Decoded message (ns=urn:iso:std:iso:15118:-20:AC): {"AC_ChargeParameterDiscoveryRes":{"Header":{"SessionID":"3C44CDF27D027A3D","TimeStamp":1702447144},"ResponseCode":"OK","BPT_AC_CPDResEnergyTransferMode":{"EVSEMaximumChargePower":{"Exponent":3,"Value":11},"EVSEMaximumChargePower_L2":{"Exponent":3,"Value":11},"EVSEMaximumChargePower_L3":{"Exponent":3,"Value":11},"EVSEMinimumChargePower":{"Exponent":0,"Value":100},"EVSEMinimumChargePower_L2":{"Exponent":0,"Value":100},"EVSEMinimumChargePower_L3":{"Exponent":0,"Value":100},"EVSENominalFrequency":{"Exponent":0,"Value":400},"MaximumPowerAsymmetry":{"Exponent":0,"Value":500},"EVSEPowerRampLimitation":{"Exponent":0,"Value":10},"EVSEPresentActivePower":{"Exponent":3,"Value":3},"EVSEPresentActivePower_L2":{"Exponent":3,"Value":3},"EVSEPresentActivePower_L3":{"Exponent":3,"Value":3},"EVSEMaximumDischargePower":{"Exponent":0,"Value":3000},"EVSEMaximumDischargePower_L2":{"Exponent":0,"Value":3000},"EVSEMaximumDischargePower_L3":{"Exponent":0,"Value":3000},"EVSEMinimumDischargePower":{"Exponent":0,"Value":300},"EVSEMinimumDischargePower_L2":{"Exponent":0,"Value":300},"EVSEMinimumDischargePower_L3":{"Exponent":0,"Value":300}}}}
+
+2024-01-30 10:56:20,719 - INFO - Frame#: 195, Time: 7.755128743
+2024-01-30 10:56:20,719 - INFO - V2GTP message :
+2024-01-30 10:56:20,750 - INFO - Decoded message (ns=urn:iso:std:iso:15118:-20:CommonMessages): {"ScheduleExchangeReq":{"Header":{"SessionID":"3C44CDF27D027A3D","TimeStamp":1702447144},"MaximumSupportingPoints":1024,"Scheduled_SEReqControlMode":{"DepartureTime":7200,"EVTargetEnergyRequest":{"Exponent":3,"Value":10},"EVMaximumEnergyRequest":{"Exponent":3,"Value":20},"EVMinimumEnergyRequest":{"Exponent":-2,"Value":5},"EVEnergyOffer":{"EVPowerSchedule":{"TimeAnchor":0,"EVPowerScheduleEntries":{"EVPowerScheduleEntry":[{"Duration":3600,"Power":{"Exponent":3,"Value":-10}}]}},"EVAbsolutePriceSchedule":{"TimeAnchor":0,"Currency":"EUR","PriceAlgorithm":"urn:iso:std:iso:15118:-20:PriceAlgorithm:1-Power","EVPriceRuleStacks":{"EVPriceRuleStack":[{"Duration":0,"EVPriceRule":[{"EnergyFee":{"Exponent":0,"Value":0},"PowerRangeStart":{"Exponent":0,"Value":0}}]}]}}}}}}
+
+2024-01-30 10:56:20,751 - INFO - Frame#: 197, Time: 7.789783818
+2024-01-30 10:56:20,751 - INFO - V2GTP message :
+2024-01-30 10:56:20,785 - INFO - Decoded message (ns=urn:iso:std:iso:15118:-20:CommonMessages): {"ScheduleExchangeRes":{"Header":{"SessionID":"3C44CDF27D027A3D","TimeStamp":1702447144},"ResponseCode":"OK","EVSEProcessing":"Finished","Scheduled_SEResControlMode":{"ScheduleTuple":[{"ScheduleTupleID":1,"ChargingSchedule":{"PowerSchedule":{"TimeAnchor":0,"AvailableEnergy":{"Exponent":3,"Value":300},"PowerTolerance":{"Exponent":0,"Value":2000},"PowerScheduleEntries":{"PowerScheduleEntry":[{"Duration":3600,"Power":{"Exponent":3,"Value":10}}]}},"AbsolutePriceSchedule":{"TimeAnchor":0,"PriceScheduleID":1,"Currency":"EUR","Language":"ENG","PriceAlgorithm":"urn:iso:std:iso:15118:-20:PriceAlgorithm:1-Power","MinimumCost":{"Exponent":0,"Value":1},"MaximumCost":{"Exponent":0,"Value":10},"TaxRules":{"TaxRule":[{"TaxRuleID":1,"TaxRuleName":"What a great tax rule","TaxRate":{"Exponent":0,"Value":10},"TaxIncludedInPrice":false,"AppliesToEnergyFee":true,"AppliesToParkingFee":true,"AppliesToOverstayFee":true,"AppliesMinimumMaximumCost":true}]},"PriceRuleStacks":{"PriceRuleStack":[{"Duration":3600,"PriceRule":[{"EnergyFee":{"Exponent":0,"Value":0},"ParkingFeePeriod":0,"CarbonDioxideEmission":0,"RenewableGenerationPercentage":0,"PowerRangeStart":{"Exponent":0,"Value":0}}]}]},"OverstayRules":{"OverstayTimeThreshold":3600,"OverstayPowerThreshold":{"Exponent":3,"Value":30},"OverstayRule":[{"OverstayRuleDescription":"What a great description","StartTime":0,"OverstayFee":{"Exponent":0,"Value":50},"OverstayFeePeriod":3600}]},"AdditionalSelectedServices":{"AdditionalService":[{"ServiceName":"What a great service name","ServiceFee":{"Exponent":0,"Value":0}}]}}},"DischargingSchedule":{"PowerSchedule":{"TimeAnchor":0,"PowerScheduleEntries":{"PowerScheduleEntry":[{"Duration":3600,"Power":{"Exponent":3,"Value":10}}]}},"AbsolutePriceSchedule":{"TimeAnchor":0,"PriceScheduleID":1,"Currency":"EUR","Language":"ENG","PriceAlgorithm":"urn:iso:std:iso:15118:-20:PriceAlgorithm:1-Power","MinimumCost":{"Exponent":0,"Value":1},"MaximumCost":{"Exponent":0,"Value":10},"TaxRules":{"TaxRule":[{"TaxRuleID":1,"TaxRuleName":"What a great tax rule","TaxRate":{"Exponent":0,"Value":10},"TaxIncludedInPrice":false,"AppliesToEnergyFee":true,"AppliesToParkingFee":true,"AppliesToOverstayFee":true,"AppliesMinimumMaximumCost":true}]},"PriceRuleStacks":{"PriceRuleStack":[{"Duration":3600,"PriceRule":[{"EnergyFee":{"Exponent":0,"Value":0},"ParkingFeePeriod":0,"CarbonDioxideEmission":0,"RenewableGenerationPercentage":0,"PowerRangeStart":{"Exponent":0,"Value":0}}]}]},"OverstayRules":{"OverstayTimeThreshold":3600,"OverstayPowerThreshold":{"Exponent":3,"Value":30},"OverstayRule":[{"OverstayRuleDescription":"What a great description","StartTime":0,"OverstayFee":{"Exponent":0,"Value":50},"OverstayFeePeriod":3600}]},"AdditionalSelectedServices":{"AdditionalService":[{"ServiceName":"What a great service name","ServiceFee":{"Exponent":0,"Value":0}}]}}}}]}}}
+
+2024-01-30 10:56:20,786 - INFO - Frame#: 199, Time: 7.857442959
+2024-01-30 10:56:20,786 - INFO - V2GTP message :
+2024-01-30 10:56:20,821 - INFO - Decoded message (ns=urn:iso:std:iso:15118:-20:CommonMessages): {"PowerDeliveryReq":{"Header":{"SessionID":"3C44CDF27D027A3D","TimeStamp":1702447144},"EVProcessing":"Finished","ChargeProgress":"Start","EVPowerProfile":{"TimeAnchor":0,"Scheduled_EVPPTControlMode":{"SelectedScheduleTupleID":1,"PowerToleranceAcceptance":"PowerToleranceConfirmed"},"EVPowerProfileEntries":{"EVPowerProfileEntry":[{"Duration":3600,"Power":{"Exponent":3,"Value":10}}]}}}}
+
+2024-01-30 10:56:20,822 - INFO - Frame#: 200, Time: 7.882433877
+2024-01-30 10:56:20,822 - INFO - V2GTP message :
+2024-01-30 10:56:20,850 - INFO - Decoded message (ns=urn:iso:std:iso:15118:-20:CommonMessages): {"PowerDeliveryRes":{"Header":{"SessionID":"3C44CDF27D027A3D","TimeStamp":1702447144},"ResponseCode":"OK"}}
+
+2024-01-30 10:56:20,851 - INFO - Frame#: 202, Time: 7.947171073
+2024-01-30 10:56:20,851 - INFO - V2GTP message :
+2024-01-30 10:56:20,870 - INFO - Decoded message (ns=urn:iso:std:iso:15118:-20:AC): {"AC_ChargeLoopReq":{"Header":{"SessionID":"3C44CDF27D027A3D","TimeStamp":1702447144},"MeterInfoRequested":false,"BPT_Scheduled_AC_CLReqControlMode":{"EVPresentActivePower":{"Exponent":3,"Value":200}}}}
+
+2024-01-30 10:56:20,870 - INFO - Frame#: 203, Time: 7.969218417
+2024-01-30 10:56:20,870 - INFO - V2GTP message :
+2024-01-30 10:56:20,889 - INFO - Decoded message (ns=urn:iso:std:iso:15118:-20:AC): {"AC_ChargeLoopRes":{"Header":{"SessionID":"3C44CDF27D027A3D","TimeStamp":1702447144},"ResponseCode":"OK","BPT_Scheduled_AC_CLResControlMode":{"EVSEPresentActivePower":{"Exponent":3,"Value":3},"EVSEPresentActivePower_L2":{"Exponent":3,"Value":3},"EVSEPresentActivePower_L3":{"Exponent":3,"Value":3}}}}
+
+2024-01-30 10:56:20,890 - INFO - Frame#: 205, Time: 8.022463464
+2024-01-30 10:56:20,890 - INFO - V2GTP message :
+2024-01-30 10:56:20,912 - INFO - Decoded message (ns=urn:iso:std:iso:15118:-20:AC): {"AC_ChargeLoopReq":{"Header":{"SessionID":"3C44CDF27D027A3D","TimeStamp":1702447144},"MeterInfoRequested":false,"BPT_Scheduled_AC_CLReqControlMode":{"EVPresentActivePower":{"Exponent":3,"Value":200}}}}
+
+2024-01-30 10:56:20,912 - INFO - Frame#: 206, Time: 8.040102859
+2024-01-30 10:56:20,912 - INFO - V2GTP message :
+2024-01-30 10:56:20,936 - INFO - Decoded message (ns=urn:iso:std:iso:15118:-20:AC): {"AC_ChargeLoopRes":{"Header":{"SessionID":"3C44CDF27D027A3D","TimeStamp":1702447144},"ResponseCode":"OK","BPT_Scheduled_AC_CLResControlMode":{"EVSEPresentActivePower":{"Exponent":3,"Value":3},"EVSEPresentActivePower_L2":{"Exponent":3,"Value":3},"EVSEPresentActivePower_L3":{"Exponent":3,"Value":3}}}}
+
+2024-01-30 10:56:20,936 - INFO - Frame#: 208, Time: 8.079001759
+2024-01-30 10:56:20,936 - INFO - V2GTP message :
+2024-01-30 10:56:20,955 - INFO - Decoded message (ns=urn:iso:std:iso:15118:-20:AC): {"AC_ChargeLoopReq":{"Header":{"SessionID":"3C44CDF27D027A3D","TimeStamp":1702447144},"MeterInfoRequested":false,"BPT_Scheduled_AC_CLReqControlMode":{"EVPresentActivePower":{"Exponent":3,"Value":200}}}}
+
+2024-01-30 10:56:20,955 - INFO - Frame#: 210, Time: 8.095752782
+2024-01-30 10:56:20,955 - INFO - V2GTP message :
+2024-01-30 10:56:20,973 - INFO - Decoded message (ns=urn:iso:std:iso:15118:-20:AC): {"AC_ChargeLoopRes":{"Header":{"SessionID":"3C44CDF27D027A3D","TimeStamp":1702447144},"ResponseCode":"OK","BPT_Scheduled_AC_CLResControlMode":{"EVSEPresentActivePower":{"Exponent":3,"Value":3},"EVSEPresentActivePower_L2":{"Exponent":3,"Value":3},"EVSEPresentActivePower_L3":{"Exponent":3,"Value":3}}}}
+
+2024-01-30 10:56:20,974 - INFO - Frame#: 212, Time: 8.152981599
+2024-01-30 10:56:20,974 - INFO - V2GTP message :
+2024-01-30 10:56:21,008 - INFO - Decoded message (ns=urn:iso:std:iso:15118:-20:CommonMessages): {"PowerDeliveryReq":{"Header":{"SessionID":"3C44CDF27D027A3D","TimeStamp":1702447144},"EVProcessing":"Finished","ChargeProgress":"Stop"}}
+
+2024-01-30 10:56:21,009 - INFO - Frame#: 213, Time: 8.193325949
+2024-01-30 10:56:21,009 - INFO - V2GTP message :
+2024-01-30 10:56:21,040 - INFO - Decoded message (ns=urn:iso:std:iso:15118:-20:CommonMessages): {"PowerDeliveryRes":{"Header":{"SessionID":"3C44CDF27D027A3D","TimeStamp":1702447144},"ResponseCode":"OK"}}
+
+2024-01-30 10:56:21,041 - INFO - Frame#: 215, Time: 8.24426667
+2024-01-30 10:56:21,041 - INFO - V2GTP message :
+2024-01-30 10:56:21,068 - INFO - Decoded message (ns=urn:iso:std:iso:15118:-20:CommonMessages): {"SessionStopReq":{"Header":{"SessionID":"3C44CDF27D027A3D","TimeStamp":1702447144},"ChargingSession":"Terminate"}}
+
+2024-01-30 10:56:21,068 - INFO - Frame#: 217, Time: 8.285545503
+2024-01-30 10:56:21,068 - INFO - V2GTP message :
+2024-01-30 10:56:21,094 - INFO - Decoded message (ns=urn:iso:std:iso:15118:-20:CommonMessages): {"SessionStopRes":{"Header":{"SessionID":"3C44CDF27D027A3D","TimeStamp":1702447144},"ResponseCode":"OK"}}
+
+2024-01-30 10:56:21,094 - INFO - -------- End of packets processing --------

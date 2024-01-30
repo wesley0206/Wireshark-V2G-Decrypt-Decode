@@ -69,6 +69,7 @@ from iso15118.shared.messages.iso15118_20.dc import (
     DCWeldingDetectionRes,
 )
 from iso15118.shared.settings import MESSAGE_LOG_EXI, MESSAGE_LOG_JSON
+from iso15118.shared.abstract_exi_codec import AbsExificientEXICodec
 
 logger = logging.getLogger(__name__)
 
@@ -283,7 +284,7 @@ class EXI:
         self.get_exi_codec()
         
         if MESSAGE_LOG_EXI:
-            print(f"EXI-encoded message (ns={namespace}): {exi_message.hex()}")
+            logger.info(f"EXI-encoded message (ns={namespace}): {exi_message.hex()}")
 
         try:
             exi_decoded = self.exi_codec.decode(exi_message, namespace)
@@ -291,8 +292,10 @@ class EXI:
             raise EXIDecodingError(
                 f"EXIDecodingError ({exc.__class__.__name__}): " f"{exc}"
             ) from exc
+        
         try:
             decoded_dict = json.loads(exi_decoded, cls=CustomJSONDecoder)
+            
         except json.JSONDecodeError as exc:
             raise EXIDecodingError(
                 f"JSON decoding error ({exc.__class__.__name__}) while "
@@ -300,7 +303,7 @@ class EXI:
             ) from exc
 
         if MESSAGE_LOG_JSON:
-            print(f"Decoded message (ns={namespace}): {exi_decoded}\n")
+            logger.info(f"Decoded message (ns={namespace}): {exi_decoded}\n")
             
     
         try:

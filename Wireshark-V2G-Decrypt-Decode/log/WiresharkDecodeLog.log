@@ -1,21 +1,21 @@
-2024-01-10T15:07:07,060 INFO [main] StartProcessing: -------- Processing UDP packets --------
-2024-01-10T15:07:07,062 INFO [main] StartProcessing: Frame#: 136, Time: 6.174016351
-2024-01-10T15:07:07,063 DEBUG [main] processmessage: Processing SECCDiscoveryReq
-2024-01-10T15:07:07,063 INFO [main] processmessage: SECCDiscoveryReq security setting: secured with TLS
-2024-01-10T15:07:07,063 INFO [main] processmessage: SECCDiscoveryReq transport protocol setting: TCP
+2024-01-11T11:38:35,280 INFO [main] StartProcessing: -------- Processing UDP packets --------
+2024-01-11T11:38:35,281 INFO [main] StartProcessing: Frame#: 136, Time: 6.174016351
+2024-01-11T11:38:35,282 DEBUG [main] processmessage: Processing SECCDiscoveryReq
+2024-01-11T11:38:35,282 INFO [main] processmessage: SECCDiscoveryReq security setting: secured with TLS
+2024-01-11T11:38:35,282 INFO [main] processmessage: SECCDiscoveryReq transport protocol setting: TCP
 
-2024-01-10T15:07:07,063 INFO [main] StartProcessing: Frame#: 137, Time: 6.175334414
-2024-01-10T15:07:07,063 DEBUG [main] processmessage: Processing SECCDiscoveryRes
-2024-01-10T15:07:07,063 INFO [main] processmessage: SECC IP Address: fe800000000000002f69c5ce924c4460
-2024-01-10T15:07:07,064 INFO [main] processmessage: SECC port number: 54144
-2024-01-10T15:07:07,064 INFO [main] processmessage: SECCDiscoveryRes security setting: secured with TLS
-2024-01-10T15:07:07,064 INFO [main] processmessage: SECCDiscoveryRes transport protocol setting: TCP
+2024-01-11T11:38:35,282 INFO [main] StartProcessing: Frame#: 137, Time: 6.175334414
+2024-01-11T11:38:35,283 DEBUG [main] processmessage: Processing SECCDiscoveryRes
+2024-01-11T11:38:35,283 INFO [main] processmessage: SECC IP Address: fe800000000000002f69c5ce924c4460
+2024-01-11T11:38:35,283 INFO [main] processmessage: SECC port number: 54144
+2024-01-11T11:38:35,283 INFO [main] processmessage: SECCDiscoveryRes security setting: secured with TLS
+2024-01-11T11:38:35,283 INFO [main] processmessage: SECCDiscoveryRes transport protocol setting: TCP
 
-2024-01-10T15:07:07,064 INFO [main] StartProcessing: -------- Processing TLS packets --------
-2024-01-10T15:07:07,064 INFO [main] StartProcessing: Frame#: 151, Time: 6.266966294
-2024-01-10T15:07:07,065 INFO [main] processmessage: Processing SupportedAppProtocol
-2024-01-10T15:07:07,125 INFO [main] decodeHexString: XML representation of SupportedAppProtocolReq: 
-2024-01-10T15:07:07,145 INFO [main] decodeHexString: 
+2024-01-11T11:38:35,283 INFO [main] StartProcessing: -------- Processing TLS packets --------
+2024-01-11T11:38:35,283 INFO [main] StartProcessing: Frame#: 151, Time: 6.266966294
+2024-01-11T11:38:35,283 INFO [main] processmessage: Processing SupportedAppProtocol
+2024-01-11T11:38:35,337 INFO [main] decodeHexString: XML representation of SupportedAppProtocolReq: 
+2024-01-11T11:38:35,356 INFO [main] decodeHexString: 
 <ns2:supportedAppProtocolReq xmlns:ns2="urn:iso:15118:2:2010:AppProtocol" xmlns:ns6="urn:iso:15118:2:2013:MsgDef" xmlns:ns5="http://www.w3.org/2000/09/xmldsig#" xmlns:ns7="urn:iso:15118:2:2013:MsgBody" xmlns:ns4="urn:iso:15118:2:2013:MsgDataTypes" xmlns:ns3="urn:iso:15118:2:2013:MsgHeader">
     <AppProtocol>
         <ProtocolNamespace>urn:iso:15118:2:2013:MsgDef</ProtocolNamespace>
@@ -33,94 +33,94 @@
     </AppProtocol>
 </ns2:supportedAppProtocolReq>
 
-2024-01-10T15:07:07,145 INFO [main] StartProcessing: Frame#: 157, Time: 6.328241490
-2024-01-10T15:07:07,145 INFO [main] processmessage: Processing SupportedAppProtocol
-2024-01-10T15:07:07,147 INFO [main] decodeHexString: XML representation of SupportedAppProtocolRes: 
-2024-01-10T15:07:07,148 INFO [main] decodeHexString: 
+2024-01-11T11:38:35,357 INFO [main] StartProcessing: Frame#: 157, Time: 6.328241490
+2024-01-11T11:38:35,357 INFO [main] processmessage: Processing SupportedAppProtocol
+2024-01-11T11:38:35,359 INFO [main] decodeHexString: XML representation of SupportedAppProtocolRes: 
+2024-01-11T11:38:35,361 INFO [main] decodeHexString: 
 <ns2:supportedAppProtocolRes xmlns:ns2="urn:iso:15118:2:2010:AppProtocol" xmlns:ns6="urn:iso:15118:2:2013:MsgDef" xmlns:ns5="http://www.w3.org/2000/09/xmldsig#" xmlns:ns7="urn:iso:15118:2:2013:MsgBody" xmlns:ns4="urn:iso:15118:2:2013:MsgDataTypes" xmlns:ns3="urn:iso:15118:2:2013:MsgHeader">
     <ResponseCode>OK_SuccessfulNegotiation</ResponseCode>
     <SchemaID>2</SchemaID>
 </ns2:supportedAppProtocolRes>
 
-2024-01-10T15:07:07,149 INFO [main] StartProcessing: Frame#: 161, Time: 6.538468740
-2024-01-10T15:07:07,149 INFO [main] processmessage: Processing other V2GTPmessages
-2024-01-10T15:07:07,160 INFO [main] StartProcessing: Frame#: 163, Time: 6.633351983
-2024-01-10T15:07:07,160 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
-2024-01-10T15:07:07,161 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
-2024-01-10T15:07:07,161 INFO [main] StartProcessing: Frame#: 167, Time: 6.752689653
-2024-01-10T15:07:07,162 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
-2024-01-10T15:07:07,162 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
-2024-01-10T15:07:07,162 INFO [main] StartProcessing: Frame#: 169, Time: 6.833098359
-2024-01-10T15:07:07,162 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
-2024-01-10T15:07:07,162 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
-2024-01-10T15:07:07,162 INFO [main] StartProcessing: Frame#: 173, Time: 7.061594445
-2024-01-10T15:07:07,162 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
-2024-01-10T15:07:07,163 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
-2024-01-10T15:07:07,163 INFO [main] StartProcessing: Frame#: 175, Time: 7.171125220
-2024-01-10T15:07:07,163 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
-2024-01-10T15:07:07,163 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
-2024-01-10T15:07:07,163 INFO [main] StartProcessing: Frame#: 178, Time: 7.341444478
-2024-01-10T15:07:07,163 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
-2024-01-10T15:07:07,163 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
-2024-01-10T15:07:07,163 INFO [main] StartProcessing: Frame#: 180, Time: 7.383070634
-2024-01-10T15:07:07,163 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
-2024-01-10T15:07:07,163 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
-2024-01-10T15:07:07,163 INFO [main] StartProcessing: Frame#: 182, Time: 7.446213782
-2024-01-10T15:07:07,164 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
-2024-01-10T15:07:07,164 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
-2024-01-10T15:07:07,164 INFO [main] StartProcessing: Frame#: 184, Time: 7.478317409
-2024-01-10T15:07:07,164 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
-2024-01-10T15:07:07,164 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
-2024-01-10T15:07:07,164 INFO [main] StartProcessing: Frame#: 188, Time: 7.548822052
-2024-01-10T15:07:07,164 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
-2024-01-10T15:07:07,164 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
-2024-01-10T15:07:07,164 INFO [main] StartProcessing: Frame#: 189, Time: 7.581798947
-2024-01-10T15:07:07,164 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
-2024-01-10T15:07:07,164 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
-2024-01-10T15:07:07,164 INFO [main] StartProcessing: Frame#: 191, Time: 7.657570840
-2024-01-10T15:07:07,165 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000011 
-2024-01-10T15:07:07,165 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
-2024-01-10T15:07:07,165 INFO [main] StartProcessing: Frame#: 193, Time: 7.702839781
-2024-01-10T15:07:07,165 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000011 
-2024-01-10T15:07:07,165 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
-2024-01-10T15:07:07,165 INFO [main] StartProcessing: Frame#: 195, Time: 7.755128743
-2024-01-10T15:07:07,165 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
-2024-01-10T15:07:07,165 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
-2024-01-10T15:07:07,165 INFO [main] StartProcessing: Frame#: 197, Time: 7.789783818
-2024-01-10T15:07:07,165 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
-2024-01-10T15:07:07,165 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
-2024-01-10T15:07:07,166 INFO [main] StartProcessing: Frame#: 199, Time: 7.857442959
-2024-01-10T15:07:07,166 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
-2024-01-10T15:07:07,166 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
-2024-01-10T15:07:07,166 INFO [main] StartProcessing: Frame#: 200, Time: 7.882433877
-2024-01-10T15:07:07,166 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
-2024-01-10T15:07:07,166 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
-2024-01-10T15:07:07,166 INFO [main] StartProcessing: Frame#: 202, Time: 7.947171073
-2024-01-10T15:07:07,166 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000011 
-2024-01-10T15:07:07,166 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
-2024-01-10T15:07:07,166 INFO [main] StartProcessing: Frame#: 203, Time: 7.969218417
-2024-01-10T15:07:07,166 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000011 
-2024-01-10T15:07:07,166 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
-2024-01-10T15:07:07,166 INFO [main] StartProcessing: Frame#: 205, Time: 8.022463464
-2024-01-10T15:07:07,167 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000011 
-2024-01-10T15:07:07,167 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
-2024-01-10T15:07:07,167 INFO [main] StartProcessing: Frame#: 206, Time: 8.040102859
-2024-01-10T15:07:07,167 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000011 
-2024-01-10T15:07:07,167 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
-2024-01-10T15:07:07,167 INFO [main] StartProcessing: Frame#: 208, Time: 8.079001759
-2024-01-10T15:07:07,167 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000011 
-2024-01-10T15:07:07,167 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
-2024-01-10T15:07:07,167 INFO [main] StartProcessing: Frame#: 210, Time: 8.095752782
-2024-01-10T15:07:07,167 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000011 
-2024-01-10T15:07:07,167 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
-2024-01-10T15:07:07,167 INFO [main] StartProcessing: Frame#: 212, Time: 8.152981599
-2024-01-10T15:07:07,168 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
-2024-01-10T15:07:07,168 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
-2024-01-10T15:07:07,168 INFO [main] StartProcessing: Frame#: 213, Time: 8.193325949
-2024-01-10T15:07:07,168 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
-2024-01-10T15:07:07,168 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
-2024-01-10T15:07:07,168 INFO [main] StartProcessing: Frame#: 215, Time: 8.244266670
-2024-01-10T15:07:07,168 INFO [main] processmessage: Processing other V2GTPmessages
-2024-01-10T15:07:07,171 INFO [main] StartProcessing: Frame#: 217, Time: 8.285545503
-2024-01-10T15:07:07,172 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
-2024-01-10T15:07:07,172 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
+2024-01-11T11:38:35,361 INFO [main] StartProcessing: Frame#: 161, Time: 6.538468740
+2024-01-11T11:38:35,361 INFO [main] processmessage: Processing other V2GTPmessages
+2024-01-11T11:38:35,375 INFO [main] StartProcessing: Frame#: 163, Time: 6.633351983
+2024-01-11T11:38:35,376 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
+2024-01-11T11:38:35,377 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
+2024-01-11T11:38:35,377 INFO [main] StartProcessing: Frame#: 167, Time: 6.752689653
+2024-01-11T11:38:35,378 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
+2024-01-11T11:38:35,378 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
+2024-01-11T11:38:35,378 INFO [main] StartProcessing: Frame#: 169, Time: 6.833098359
+2024-01-11T11:38:35,378 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
+2024-01-11T11:38:35,378 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
+2024-01-11T11:38:35,378 INFO [main] StartProcessing: Frame#: 173, Time: 7.061594445
+2024-01-11T11:38:35,379 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
+2024-01-11T11:38:35,379 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
+2024-01-11T11:38:35,379 INFO [main] StartProcessing: Frame#: 175, Time: 7.171125220
+2024-01-11T11:38:35,379 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
+2024-01-11T11:38:35,379 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
+2024-01-11T11:38:35,379 INFO [main] StartProcessing: Frame#: 178, Time: 7.341444478
+2024-01-11T11:38:35,380 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
+2024-01-11T11:38:35,380 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
+2024-01-11T11:38:35,380 INFO [main] StartProcessing: Frame#: 180, Time: 7.383070634
+2024-01-11T11:38:35,380 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
+2024-01-11T11:38:35,380 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
+2024-01-11T11:38:35,380 INFO [main] StartProcessing: Frame#: 182, Time: 7.446213782
+2024-01-11T11:38:35,381 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
+2024-01-11T11:38:35,381 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
+2024-01-11T11:38:35,381 INFO [main] StartProcessing: Frame#: 184, Time: 7.478317409
+2024-01-11T11:38:35,381 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
+2024-01-11T11:38:35,381 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
+2024-01-11T11:38:35,381 INFO [main] StartProcessing: Frame#: 188, Time: 7.548822052
+2024-01-11T11:38:35,381 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
+2024-01-11T11:38:35,381 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
+2024-01-11T11:38:35,382 INFO [main] StartProcessing: Frame#: 189, Time: 7.581798947
+2024-01-11T11:38:35,382 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
+2024-01-11T11:38:35,382 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
+2024-01-11T11:38:35,382 INFO [main] StartProcessing: Frame#: 191, Time: 7.657570840
+2024-01-11T11:38:35,382 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000011 
+2024-01-11T11:38:35,382 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
+2024-01-11T11:38:35,382 INFO [main] StartProcessing: Frame#: 193, Time: 7.702839781
+2024-01-11T11:38:35,382 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000011 
+2024-01-11T11:38:35,383 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
+2024-01-11T11:38:35,383 INFO [main] StartProcessing: Frame#: 195, Time: 7.755128743
+2024-01-11T11:38:35,383 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
+2024-01-11T11:38:35,383 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
+2024-01-11T11:38:35,383 INFO [main] StartProcessing: Frame#: 197, Time: 7.789783818
+2024-01-11T11:38:35,383 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
+2024-01-11T11:38:35,384 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
+2024-01-11T11:38:35,384 INFO [main] StartProcessing: Frame#: 199, Time: 7.857442959
+2024-01-11T11:38:35,384 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
+2024-01-11T11:38:35,384 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
+2024-01-11T11:38:35,384 INFO [main] StartProcessing: Frame#: 200, Time: 7.882433877
+2024-01-11T11:38:35,384 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
+2024-01-11T11:38:35,384 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
+2024-01-11T11:38:35,384 INFO [main] StartProcessing: Frame#: 202, Time: 7.947171073
+2024-01-11T11:38:35,385 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000011 
+2024-01-11T11:38:35,385 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
+2024-01-11T11:38:35,385 INFO [main] StartProcessing: Frame#: 203, Time: 7.969218417
+2024-01-11T11:38:35,385 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000011 
+2024-01-11T11:38:35,385 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
+2024-01-11T11:38:35,385 INFO [main] StartProcessing: Frame#: 205, Time: 8.022463464
+2024-01-11T11:38:35,385 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000011 
+2024-01-11T11:38:35,385 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
+2024-01-11T11:38:35,385 INFO [main] StartProcessing: Frame#: 206, Time: 8.040102859
+2024-01-11T11:38:35,386 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000011 
+2024-01-11T11:38:35,386 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
+2024-01-11T11:38:35,386 INFO [main] StartProcessing: Frame#: 208, Time: 8.079001759
+2024-01-11T11:38:35,386 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000011 
+2024-01-11T11:38:35,386 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
+2024-01-11T11:38:35,386 INFO [main] StartProcessing: Frame#: 210, Time: 8.095752782
+2024-01-11T11:38:35,386 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000011 
+2024-01-11T11:38:35,386 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
+2024-01-11T11:38:35,386 INFO [main] StartProcessing: Frame#: 212, Time: 8.152981599
+2024-01-11T11:38:35,387 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
+2024-01-11T11:38:35,387 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
+2024-01-11T11:38:35,387 INFO [main] StartProcessing: Frame#: 213, Time: 8.193325949
+2024-01-11T11:38:35,387 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
+2024-01-11T11:38:35,387 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage
+2024-01-11T11:38:35,387 INFO [main] StartProcessing: Frame#: 215, Time: 8.244266670
+2024-01-11T11:38:35,387 INFO [main] processmessage: Processing other V2GTPmessages
+2024-01-11T11:38:35,394 INFO [main] StartProcessing: Frame#: 217, Time: 8.285545503
+2024-01-11T11:38:35,394 ERROR [main] processmessage: Payload type not supported! Proposed payload type: 10000000 00000010 
+2024-01-11T11:38:35,394 WARN [main] processmessage: Received incoming message is not a valid V2GTPMessage

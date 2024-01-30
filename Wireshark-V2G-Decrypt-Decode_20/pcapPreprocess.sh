@@ -1,6 +1,5 @@
 #!/bin/bash
 
-echo -e "\e[33mINFO: Please install java first. (jdk-11.0.14 is recommended.)\e[0m"
 echo -e "\e[33mINFO: Please install Wireshark at /usr/bin/\e[0m"
 echo -e "\e[33mINFO: This program will use 'editcap' to decrypt a pcap file\e[0m"
 echo -e "\e[33mINFO: and 'tshark' to filter specific fields.\e[0m"
@@ -51,6 +50,7 @@ tshark -r out-dsb.pcapng -Y "tls and data.data and (eth.addr == $seccMAC and eth
 echo -e "\e[1mINFO: Converting dumped data to JSON format...\e[0m"
 cd ..
 cd ..
+make install-local
 poetry shell
 meke run-decode
 
